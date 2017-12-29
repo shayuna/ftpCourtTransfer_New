@@ -12,13 +12,13 @@ using System.IO;
 using System.Globalization;
 using System.Threading;
 using System.Text.RegularExpressions;
+using Microsoft.Office.Interop;
 
 namespace ftpCourtTransfer_New
 {
     public partial class Form1 : Form
     {
         private string[] arFolderNames;
-
         public Form1()
         {
             InitializeComponent();
@@ -134,6 +134,7 @@ namespace ftpCourtTransfer_New
 
         private void button1_Click(object sender, EventArgs e)
         {
+            label5.Text = "";
             if (chkFldsValidity())
             {
                 bool bContinue = true;
@@ -181,6 +182,7 @@ namespace ftpCourtTransfer_New
                 */
                 if (bContinue)
                 {
+                    label5.Text = "סטטוס: משיכת קבצים";
                     arFolderNames = sFolderNames.Split(',');
                     foreach (string sFolder in arFolderNames)
                     {
@@ -195,6 +197,7 @@ namespace ftpCourtTransfer_New
                         }
                         downloadFiles(sFolder);
                     }
+                    label5.Text = "";
                     MessageBox.Show("תהליך ההורדה הסתיים");
                 }
 
@@ -207,6 +210,7 @@ namespace ftpCourtTransfer_New
         private void downloadFiles(string sFolderNm)
         {
             string tmpTxt = webBrowser1.Document.Body.InnerHtml;
+            int iCount = 0;
             Regex re = new Regex("<a.*?</a>",RegexOptions.IgnoreCase);
             Regex re2 = new Regex(@"href=""(.*?)""", RegexOptions.IgnoreCase);
             Regex re3 = new Regex(">(.*?)<", RegexOptions.IgnoreCase);
@@ -216,6 +220,9 @@ namespace ftpCourtTransfer_New
                 string sLink = m.ToString();
                 if (sLink.IndexOf("href") > -1 && (sLink.IndexOf("doc")>-1 || sLink.IndexOf("xml") > -1))
                 {
+                    iCount++;
+                    label5.Text = "משיכת קובץ " + iCount + " מתוך " + mt.Count + " קבצים";
+                    label5.Refresh();
                     string sHref = re2.Match(sLink).Groups[1].ToString();
                     string sName = re3.Match(sLink).Groups[1].ToString();
                     string sLocalPath = copyTo.Text + "\\"+sFolderNm+"\\"+sName;
@@ -235,6 +242,7 @@ namespace ftpCourtTransfer_New
 
         private void button2_Click(object sender, EventArgs e)
         {
+            label5.Text = "";
             bool bContinue = true;
             string sRemoteFolderNm="",sLocalFolderNm="",sLocalFolderPath="";
 
@@ -268,6 +276,7 @@ namespace ftpCourtTransfer_New
             else if (chkFldsValidity() && bContinue)
             {
 
+                label5.Text = "סטטוס: השוואת ספריות";
                 string tmpUrl = "https://decisions.court.gov.il/" + sRemoteFolderNm + "/";
                 bool bAllFilesDownloaded = true;
                 webBrowser1.Navigate(tmpUrl);
@@ -324,6 +333,7 @@ namespace ftpCourtTransfer_New
             {
                 MessageBox.Show("תהליך ההשוואה נכשל בשל אחת משתי סיבות אפשריות: הספריה המקומית אינה קיימת או שטווח התאריכים שנבחר גדול מיום אחד");
             }
+            label5.Text = "";
 
         }
     }
