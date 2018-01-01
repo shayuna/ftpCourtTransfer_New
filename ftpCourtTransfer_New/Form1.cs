@@ -31,6 +31,7 @@ namespace ftpCourtTransfer_New
             fromDate.Text = sYesterday;
             toDate.Text = sYesterday;
             startAt.Text = sNow;
+            writeToLog("starting a new session");
             webBrowser1.Navigate ("https://decisions.court.gov.il");
         }
         private void DownloadFile(string sLocalFilePath, string sRemoteFileNm)
@@ -42,6 +43,7 @@ namespace ftpCourtTransfer_New
 
             string sRemoteFilePath= "https://" + sHttpsHost + sRemoteFileNm;
 
+            writeToLog(DateTime.Now.ToString() + " - " + sLocalFilePath);
             using (WebClient request = new WebClient())
             {
                 request.Credentials = new NetworkCredential("idc\\data-hok", "L1150508a");
@@ -260,11 +262,12 @@ namespace ftpCourtTransfer_New
         private void button1_Click(object sender, EventArgs e)
         {
             /*
-                        moveDocHdr("c:\\users\\shay\\tmpdoc.docx");
-                        System.Windows.Forms.Application.Exit();
-                        return;
-              */
-
+            oWordApp = new Microsoft.Office.Interop.Word.Application();
+            moveDocHdr("c:\\users\\shay\\tmpdoc2.docx");
+            oWordApp.Quit(WdSaveOptions.wdDoNotSaveChanges);
+            System.Windows.Forms.Application.Exit();
+            return;
+            */
             if (!chkFldsValidity()) return;
 
             if (checkBox1.Checked)
@@ -463,7 +466,14 @@ namespace ftpCourtTransfer_New
                     {
                         oDoc.Sections[1].Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range.Copy();
                         oRng.Paste();
-                        oDoc.Sections[1].Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range.Delete();
+                        try
+                        {
+                            oDoc.Sections[1].Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range.Delete();
+                        }
+                        catch(Exception ex)
+                        {
+                            /* in case editing isn't allowed on this part of the document */
+                        }
                     }
                     iPrgAfter = oDoc.Paragraphs.Count;
                     for (jj = 1; jj <= iPrgAfter - iPrgBefore; jj++)
@@ -476,7 +486,7 @@ namespace ftpCourtTransfer_New
             }
             catch (Exception ex)
             {
-                writeToLog(sLocalFilePath);
+                writeToLog(DateTime.Now.ToString()+" - " + sLocalFilePath +" - failed");
                 oDoc.Close(WdSaveOptions.wdDoNotSaveChanges);
                 if (File.Exists(sLocalFilePath)) File.Delete(sLocalFilePath);
                 //general exception 

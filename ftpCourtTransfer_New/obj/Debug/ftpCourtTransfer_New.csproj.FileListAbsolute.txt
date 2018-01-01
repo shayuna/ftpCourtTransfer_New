@@ -7,4 +7,3 @@ c:\users\shay\documents\visual studio 2015\Projects\ftpCourtTransfer_New\ftpCour
 c:\users\shay\documents\visual studio 2015\Projects\ftpCourtTransfer_New\ftpCourtTransfer_New\obj\Debug\ftpCourtTransfer_New.pdb
 c:\users\shay\documents\visual studio 2015\Projects\ftpCourtTransfer_New\ftpCourtTransfer_New\obj\Debug\ftpCourtTransfer_New.Form1.resources
 C:\Users\shay\Documents\Visual Studio 2015\Projects\ftpCourtTransfer_New\ftpCourtTransfer_New\obj\Debug\ftpCourtTransfer_New.csproj.ResolveComReference.cache
-C:\Users\shay\Documents\Visual Studio 2015\Projects\ftpCourtTransfer_New\ftpCourtTransfer_New\obj\Debug\ftpCourtTransfer_New.csprojResolveAssemblyReference.cache
