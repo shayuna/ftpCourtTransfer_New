@@ -1,0 +1,78 @@
+starting a new session
+starting a new session
+starting a new session
+02/01/2018 13:15:01 - c:\users\shay\tmpdoc.docx - failed
+starting a new session
+02/01/2018 13:15:59 - c:\users\shay\tmpdoc.docx - failed
+starting a new session
+02/01/2018 13:21:16 - c:\users\shay\tmpdoc.docx - failed
+starting a new session
+02/01/2018 13:25:31 - c:\users\shay\tmpdoc.docx - corrupted document. wouldn't open. can't do nothing about it.
+starting a new session
+02/01/2018 13:27:20 - c:\users\shay\tmpdoc.docx - there's a corrupted document for you. it's a word thing and we can do nothing to fix it.
+starting a new session
+02/01/2018 13:45:26 - c:\users\shay\tmpdoc2.docx - general faulure. who knows anything, right ?
+starting a new session
+02/01/2018 13:45:58 - c:\users\shay\tmpdoc2.docx - there's a corrupted document for you. it's a word thing and we can do nothing to fix it.
+starting a new session
+02/01/2018 13:47:30 - c:\users\shay\tmpdoc2.docx - there's a corrupted document for you. it's a word thing and we can do nothing to fix it.
+starting a new session
+02/01/2018 13:55:57 - c:\users\shay\tmpdoc2.docx - general faulure. who knows anything, right ?
+starting a new session
+starting a new session
+02/01/2018 14:17:50 - c:\users\shay\tmpdoc2.docx - general faulure. who knows anything, right ?
+starting a new session
+starting a new session
+starting a new session
+starting a new session
+starting a new session
+02/01/2018 14:56:16 - c:\users\shay\2018-1-1\018798a160010000090037f693290fc1.docx
+02/01/2018 14:56:24 - c:\users\shay\2018-1-1\01afb19e60010000090037f69328e839.docx
+02/01/2018 14:56:31 - c:\users\shay\2018-1-1\022863a260010000090037f693292400.docx
+02/01/2018 14:56:33 - c:\users\shay\2018-1-1\02c30ba260010000090037f69329146a.docx
+02/01/2018 14:56:36 - c:\users\shay\2018-1-1\06f4fb03df5540c0b3b6b2cce6eea48d.docx
+02/01/2018 14:56:39 - c:\users\shay\2018-1-1\0841e81d14dd4117afb0d842afe0342e.docx
+02/01/2018 14:56:42 - c:\users\shay\2018-1-1\0bee65a260010000090037f693291fd1.docx
+02/01/2018 14:56:53 - \2018-1-1\0c968fd23cac416697b1fe736a722dbd.docx
+starting a new session
+02/01/2018 14:59:28 - c:\users\shay\2018-1-1\018798a160010000090037f693290fc1.docx
+02/01/2018 14:59:30 - c:\users\shay\2018-1-1\01afb19e60010000090037f69328e839.docx
+02/01/2018 14:59:31 - c:\users\shay\2018-1-1\022863a260010000090037f693292400.docx
+02/01/2018 14:59:33 - c:\users\shay\2018-1-1\02c30ba260010000090037f69329146a.docx
+02/01/2018 14:59:37 - c:\users\shay\2018-1-1\06f4fb03df5540c0b3b6b2cce6eea48d.docx
+02/01/2018 14:59:38 - c:\users\shay\2018-1-1\0841e81d14dd4117afb0d842afe0342e.docx
+02/01/2018 14:59:39 - c:\users\shay\2018-1-1\0bee65a260010000090037f693291fd1.docx
+02/01/2018 14:59:40 - c:\users\shay\2018-1-1\0c968fd23cac416697b1fe736a722dbd.docx
+02/01/2018 14:59:41 - c:\users\shay\2018-1-1\0cb489a160010000090037f6932900d0.docx
+02/01/2018 14:59:43 - c:\users\shay\2018-1-1\0d2f0074aa7d449d85d882a9b4cd59fe.docx
+02/01/2018 14:59:44 - c:\users\shay\2018-1-1\0d79a22ffcd946729980fd125a2e1255.docx
+02/01/2018 14:59:45 - c:\users\shay\2018-1-1\10c368a160010000090037f69328f82e.docx
+02/01/2018 14:59:46 - c:\users\shay\2018-1-1\10fba1a160010000090037f6932925cb.docx
+02/01/2018 14:59:47 - c:\users\shay\2018-1-1\11fe819e60010000090037f69328ebda.docx
+02/01/2018 14:59:48 - c:\users\shay\2018-1-1\120419a360010000090037f693292c2a.docx
+02/01/2018 14:59:50 - c:\users\shay\2018-1-1\12d6e7a160010000090037f69329265d.docx
+02/01/2018 14:59:51 - c:\users\shay\2018-1-1\1364caa160010000090037f693291e49.docx
+02/01/2018 14:59:52 - c:\users\shay\2018-1-1\143f00a160010000090037f6932906dc.docx
+02/01/2018 14:59:53 - c:\users\shay\2018-1-1\147aaf9e60010000090037f69328f63a.docx
+02/01/2018 14:59:54 - c:\users\shay\2018-1-1\14d57aa160010000090037f69328f8e7.docx
+02/01/2018 14:59:55 - c:\users\shay\2018-1-1\15addeaab8f84b579b14a2b872e8ca3f.docx
+02/01/2018 14:59:57 - c:\users\shay\2018-1-1\1a3493a160010000090037f6932925ae.docx
+02/01/2018 14:59:58 - c:\users\shay\2018-1-1\1a98d39d60010000090037f69328e24d.docx
+02/01/2018 14:59:59 - c:\users\shay\2018-1-1\1bbaa17ff1bc43cd9517e02634222ace.docx
+02/01/2018 15:00:00 - c:\users\shay\2018-1-1\1c12a469704f443da15dc58dae7b52b2.docx
+02/01/2018 15:00:01 - c:\users\shay\2018-1-1\1c1f54d456704167b1801a122abf4325.docx
+02/01/2018 15:00:02 - c:\users\shay\2018-1-1\1cdb2da160010000090037f693291178.docx
+02/01/2018 15:00:03 - c:\users\shay\2018-1-1\1cec5aa130ec432e9e5b6dee6c10dcd9.docx
+02/01/2018 15:00:09 - c:\users\shay\2018-1-1\1d6812a160010000090037f69328fb73.docx
+02/01/2018 15:00:10 - c:\users\shay\2018-1-1\1e76eba160010000090037f6932910cd.docx
+02/01/2018 15:00:11 - c:\users\shay\2018-1-1\1ed455e1a3494329a704fe2891c6292d.docx
+02/01/2018 15:00:13 - c:\users\shay\2018-1-1\1f80ff9d60010000090037f69328d402.docx
+02/01/2018 15:00:14 - c:\users\shay\2018-1-1\20b52990f5354659877d86a2b6f64d2f.docx
+02/01/2018 15:00:15 - c:\users\shay\2018-1-1\20e74173d76a4d97ba1a93f8603f2c52.docx
+02/01/2018 15:00:16 - c:\users\shay\2018-1-1\241f62a160010000090037f69329150a.docx
+02/01/2018 15:00:17 - c:\users\shay\2018-1-1\25c5ea50b53a4b278df59897ab1ff257.docx
+02/01/2018 15:00:19 - c:\users\shay\2018-1-1\260108a160010000090037f693290767.docx
+02/01/2018 15:00:20 - c:\users\shay\2018-1-1\2932c76dccc6497dae265d9d1b7468fa.docx
+02/01/2018 15:00:21 - c:\users\shay\2018-1-1\2958d0a060010000090037f693290761.docx
+02/01/2018 15:00:23 - c:\users\shay\2018-1-1\2996d2bf89a94af098c9d592a332ba9c.docx
+02/01/2018 15:00:24 - c:\users\shay\2018-1-1\2b661da260010000090037f6932932fb.docx

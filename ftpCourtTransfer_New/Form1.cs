@@ -26,8 +26,14 @@ namespace ftpCourtTransfer_New
             copyTo.Text = "";
             DateTime dtYesterday = DateTime.Now.AddDays(-1);
             DateTime dtNow = DateTime.Now;
-            string sNow = dtNow.Day + "/" + dtNow.Month + "/" + dtNow.Year + " " + dtNow.Hour + ":" + dtNow.Minute + ":" + dtNow.Second;
-            string sYesterday = dtYesterday.Day+"/"+ dtYesterday.Month+"/"+ dtYesterday.Year;
+            string sYDay = dtYesterday.Day.ToString(), sYMonth = dtYesterday.Month.ToString(), sYYear = dtYesterday.Year.ToString();
+            string sDay = dtNow.Day.ToString(), sMonth = dtNow.Month.ToString(), sYear = dtNow.Year.ToString();
+            if (sYDay.Length == 1) sYDay = "0" + sYDay;
+            if (sYMonth.Length == 1) sYMonth = "0" + sYMonth;
+            if (sDay.Length == 1) sDay = "0" + sDay;
+            if (sMonth.Length == 1) sMonth = "0" + sMonth;
+            string sNow = sDay + "/" + sMonth + "/" + sYear + " " + dtNow.Hour + ":" + dtNow.Minute + ":" + dtNow.Second;
+            string sYesterday = sYDay+"/"+ sYMonth+"/"+ sYYear;
             fromDate.Text = sYesterday;
             toDate.Text = sYesterday;
             startAt.Text = sNow;
@@ -426,9 +432,10 @@ namespace ftpCourtTransfer_New
         }
         private void moveDocHdr(string sLocalFilePath)
         {
-            Microsoft.Office.Interop.Word.Document oDoc = oWordApp.Documents.Open(sLocalFilePath);
+            Microsoft.Office.Interop.Word.Document oDoc = null;
             try
             {
+                oDoc = oWordApp.Documents.Open(sLocalFilePath);
                 Regex re = new Regex("[a-z0-9א-ת]", RegexOptions.IgnoreCase);
                 bool bEditeHdrSuccess = true;
                 if (oDoc.Sections[1].Headers.Count > 0 && re.IsMatch(oDoc.Sections[1].Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range.Text))
@@ -476,9 +483,15 @@ namespace ftpCourtTransfer_New
                         }
                     }
                     iPrgAfter = oDoc.Paragraphs.Count;
-                    for (jj = 1; jj <= iPrgAfter - iPrgBefore; jj++)
+                    try
                     {
-                        oDoc.Paragraphs[jj].NoLineNumber = -1;
+                        for (jj = 1; jj <= iPrgAfter - iPrgBefore; jj++)
+                        {
+                            oDoc.Paragraphs[jj].NoLineNumber = -1;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
                     }
                     Clipboard.Clear();
                 }
@@ -486,8 +499,11 @@ namespace ftpCourtTransfer_New
             }
             catch (Exception ex)
             {
-                writeToLog(DateTime.Now.ToString()+" - " + sLocalFilePath +" - failed");
-                oDoc.Close(WdSaveOptions.wdDoNotSaveChanges);
+                string sReason = "";
+                if (oDoc != null) sReason = " - general faulure. who knows anything, right ?";
+                else sReason = " - there's a corrupted document for you. it's a word thing and we can do nothing to fix it.";
+                writeToLog(DateTime.Now.ToString() + " - " + sLocalFilePath + sReason);
+                if (oDoc!=null) oDoc.Close(WdSaveOptions.wdDoNotSaveChanges);/* we don't use finally to unite to oDoc.close because when the operation succeeds we leave the doc in a balanced state and hence can save it. but if we thrown off an exception, who knows what state is the document in, so we don't want to save changes. also, we have the condition of oDoc!=null because i have encountered cases in which the doc didn't open because of a corrupted file, we got thrown to the outer exception and the doc object remained with the null value*/
                 if (File.Exists(sLocalFilePath)) File.Delete(sLocalFilePath);
                 //general exception 
             }
